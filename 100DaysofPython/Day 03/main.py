@@ -5,3 +5,4 @@ if height >= 120:
   print("You can ride the rollercoaster!")
 else:
   print("Sorry, you are too short to ride the rollercoaster.")
+  #code that works
