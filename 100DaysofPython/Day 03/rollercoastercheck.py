@@ -8,7 +8,7 @@ if height >= 120:
         print("Adult tickets are $12")
     elif age >= 12 and age <= 18:
         bill = 7
-        print("YYouth tickets are $7")
+        print("Youth tickets are $7")
     elif age < 12:
         bill = 5
         print("Child tickets are $5")
