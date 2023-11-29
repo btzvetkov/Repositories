@@ -29,9 +29,9 @@ print("Your mission is to find the treasure.")
 
 decision = input('''You are now on a mysterious island where old captain Flack 
 Barrow shipwrecked the Track Furl and hid the crazy treasure.
-You have the option to go Left or Right:''')
+Type whether you want to go "Left" or "Right":''').lower()
 
-if decision == "Right" or decision == "right" or decision == "RIGHT":
+if decision == "right":
     print('''You chose to go right. You walk for a few meters and fall into a
           hole that was created by the captain to build a swimming pool.
                                                 +---+
@@ -54,8 +54,8 @@ elif decision == "Left" or decision == "left" or decision == 'LEFT':
     print('''You chose to go left. You walk for a few minutes and reach a lake.
           It looks muddy and suspicious but you don't see any boat around and 
           you are not sure how much time do you have before you get caught.''')
-    decision = input('What do you do: swim or wait?')
-    if decision == 'SWIM' or decision == 'swim' or decision == 'Swim':
+    decision = input('What will you do: "swim" or "wait"?').lower()
+    if decision == 'swim':
         print('''You chose to swim. The water is heavy but you manage to go through
               you see the other shore in the far and attempt to reach it but you get stuck.
               A crocodile who hasn't had anything for breakfast comes buy and eats you like
@@ -71,17 +71,17 @@ elif decision == "Left" or decision == "left" or decision == 'LEFT':
                                    '-._____.-'
 
               Game over.''')
-    elif decision == 'WAIT' or decision == 'Wait' or decision == 'wait':
+    elif decision == 'wait':
         print("""You decided to wait. As the minutes go by you actually notice a boat that was 
               hidden a few minutes ago as it was a bit foggy on the coast when you arrived.
               You take the boat and sail until you reach the other end of the lake.
               Once you get there you see a wooden structure that has three doors:
               Red, yellow and blue. What would you do? """)
         decision = input ('''To open a door enter the color: 
-                          Red, Yellow or Blue. 
-                          To do something else, type: else.
-                          So what's your decision? ''')
-        if decision == "Red" or decision == "RED" or decision == "red":
+                          "Red", "Yellow" or "Blue". 
+                          To do something else, type: "else".
+                          So what's your decision? ''').lower()
+        if decision == "red":
             print('''You chose to open the red door. As soon as you do that 100 kg of TNT
                   blow up and you are consumed by the explosion.
   +----------------------------------------------------------------------+
@@ -103,7 +103,7 @@ elif decision == "Left" or decision == "left" or decision == 'LEFT':
      (_,) . ), ) _) _,')  (, ) '. )  ,. (' )
  jgs^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                   Game over.''')
-        elif decision == "Yellow" or decision == "YELLOW" or decision == "yellow":
+        elif decision == "yellow":
             print('''You chose to open the yellow door. It is a very narrow door. However,
                   you manage to go through it. You enter a small room and there is a chest.
                   You open it and there is the treasure. You come back happy buy a house and
@@ -131,7 +131,7 @@ elif decision == "Left" or decision == "left" or decision == 'LEFT':
       /__\    |_|_|   |_|_|   |_|_|  (\I/\.__|A|R|T|                  
       `''     `-'-'   `-'-'   `-'-'  `'-`'   `o' `o'                  
                   You win!''')
-        elif decision == "Blue" or decision == "BLUE" or decision == "blue":
+        elif decision == "blue":
             print('''You chose to open the blue door. You enter a garden, looks suspicious 
                   but anyway you move on - you have decided to not look back. Then you
                   get swallowed and eaten up by a hoard of beasts.
@@ -146,7 +146,7 @@ elif decision == "Left" or decision == "left" or decision == 'LEFT':
       /`-._.-'/
       `-.__.-' jg
                   Game over!''')
-        elif decision == "Else" or decision == "ELSE" or decision == "else":
+        elif decision == "else":
             print('''You are wondering what to do, then suddenly you realise you are 
                   late for your dentist appointment.
             /-----|
