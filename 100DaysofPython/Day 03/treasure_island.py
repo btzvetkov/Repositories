@@ -46,8 +46,8 @@ if decision == "Right" or decision == "right" or decision == "RIGHT":
          \                      |     + |   |
           \                     |      \| DM|
            \--------------------+       +---+
-            \                    \        \
-             \                    \        \
+            \                    \        \\
+             \                    \        \\
               +-----------------------------+
           Game over.''')
 elif decision == "Left" or decision == "left" or decision == 'LEFT':
@@ -158,6 +158,10 @@ elif decision == "Left" or decision == "left" or decision == 'LEFT':
 ejm 96   |`` \ \  |
         """  ~ ~ ===
                   Game over.''')
+        else:
+            decision = 'typomonster'
+    else:
+        decision = 'typomonster'
 else:
     decision = 'typomonster'
 
