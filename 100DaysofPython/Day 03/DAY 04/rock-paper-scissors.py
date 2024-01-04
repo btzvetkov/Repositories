@@ -39,20 +39,13 @@ elif (yourchoice == 0 and pcchoice == 2) or (yourchoice == 1 and pcchoice == 0) 
 else:
     message = "Draw"
 
-if yourchoice == 0:
-    print(rock)
-elif yourchoice == 1:
-    print(paper)
-elif yourchoice == 2:
-    print(scissors)
+game_images = [rock, paper, scissors]
 
-print("Computer chose:")    
-if pcchoice == 0:
-    print(rock)
-elif pcchoice == 1:
-    print(paper)
-elif pcchoice == 2:
-    print(scissors)
+if yourchoice > 2 or yourchoice < 0:
+    message = "You have entered an invalid number"
+else:
+    print(game_images[yourchoice])
+    print("Computer chose:")    
+    print(game_images[pcchoice])
 
 print(message)
-# print(f"The computer chose {pcchoice}")
