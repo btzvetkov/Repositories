@@ -40,8 +40,34 @@ number_to_word = {
     900: 'nine hundred',
 }
 
-if len(number_to_check) == 1:
+if len(number_to_check) == 1 or (len(number_to_check) == 2 and given_number <= 20):
     final_answer = number_to_word[given_number]
 
+elif len(number_to_check) == 2 and given_number > 20:
+    first_digit = str(number_to_check[0]) + "0"
+    second_digit = str(number_to_check[1])
+    final_answer = number_to_word[int(first_digit)] + " " + number_to_word[int(second_digit)]
+
+elif len(number_to_check) == 3 and int(number_to_check[1]) != 0 and int(number_to_check[2]) != 0:
+    first_digit = str(number_to_check[0]) + "0" + "0"
+    third_digit = str(number_to_check[2])
+    if int(number_to_check[1]) >= 2:
+        second_digit_interim = str(number_to_check[1]) + "0"
+        second_digit = number_to_word[int(second_digit_interim)]
+        final_answer = number_to_word[int(first_digit)] + " and " + second_digit + " " + number_to_word[int(third_digit)]
+    else:
+        second_digit_interim = str(number_to_check[1]) + str(number_to_check[2])
+        second_digit = number_to_word[int(second_digit_interim)]
+        final_answer = number_to_word[int(first_digit)] + " and " + second_digit
+
+elif len(number_to_check) == 3 and int(number_to_check[1]) == 0 and int(number_to_check[2]) != 0:
+    first_digit = str(number_to_check[0]) + "0" + "0"
+    third_digit = str(number_to_check[2])
+    second_digit = ''
+    final_answer = number_to_word[int(first_digit)] + " and " + number_to_word[int(third_digit)]
+
+elif len(number_to_check) == 3 and int(number_to_check[1]) == 0 and int(number_to_check[2]) == 0:
+    first_digit = str(number_to_check[0]) + "0" + "0"
+    final_answer = number_to_word[int(first_digit)]
 
 print(final_answer)
