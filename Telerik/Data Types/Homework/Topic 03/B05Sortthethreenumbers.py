@@ -2,6 +2,10 @@ a = int(input())
 b = int(input())
 c = int(input())
 
+# largest = max(a, b, c)
+# smallest = min(a, b, c)
+        
+
 if a > b and a > c:
     first_number = a
 elif b > a and b > c:
